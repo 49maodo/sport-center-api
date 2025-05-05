@@ -6,10 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.lang.model.util.Types;
-
 @Entity
-@Table(name = "Type")
+@Table(name = "Product")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -37,6 +35,6 @@ public class Product {
   private Brand brand;
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "ProductTypeId", referencedColumnName = "Id")
+  @JoinColumn(name="ProductTypeId", referencedColumnName = "Id")
   private Type type;
 }

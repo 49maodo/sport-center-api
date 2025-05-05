@@ -1,13 +1,14 @@
+
 server:
-  port: 8000
+  port: 8081
 
 spring:
-  application:
-    name: sportcenter
   datasource:
-    url: jdbc:mysql://localhost:3306/sport-center
+    url: jdbc:mysql://localhost:3306/sports-center
     username: root
     password: password
+  application:
+    name: SportsCenter
   jpa:
     hibernate:
       ddl-auto: update
